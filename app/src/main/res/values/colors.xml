@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="executing">#f2ffd3</color>
+    <color name="validated">#ffefc4</color>
+    <color name="started">#d3eeff</color>
+</resources>
