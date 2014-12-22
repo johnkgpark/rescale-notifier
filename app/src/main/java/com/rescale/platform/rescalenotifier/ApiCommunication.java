@@ -11,13 +11,14 @@ import retrofit.http.Body;
 import retrofit.http.GET;
 import retrofit.http.Header;
 import retrofit.http.POST;
+import retrofit.http.Path;
 import retrofit.http.Query;
 
 /**
  * Created by johnpark on 12/19/14.
  */
 public class ApiCommunication {
-    public final String baseUrl = "http://10.0.1.180:8000";
+    public final String baseUrl = "http://192.168.128.236:8000";
     private String token = "";
 
     public ApiCommunication(String token) {
@@ -43,6 +44,15 @@ public class ApiCommunication {
         void getJobs(
             @Header("Authorization") String token,
             @Query("t") int type,
+            Callback<JsonObject> callback
+        );
+    }
+
+    public interface StopJobInterface {
+        @GET("/api/jobs/{jobId}/stop/")
+        void getJobs(
+            @Header("Authorization") String token,
+            @Path("jobId") String jobId,
             Callback<JsonObject> callback
         );
     }

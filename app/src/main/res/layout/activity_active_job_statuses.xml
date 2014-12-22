@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:screenOrientation="portrait"
     android:configChanges="orientation|keyboardHidden"
+    android:background="@color/black"
     tools:context="com.rescale.platform.rescalenotifier.ActiveJobStatuses">
 
     <LinearLayout android:id="@+id/bottom_control_bar"

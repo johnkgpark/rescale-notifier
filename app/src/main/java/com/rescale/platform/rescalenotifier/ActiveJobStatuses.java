@@ -2,11 +2,7 @@ package com.rescale.platform.rescalenotifier;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -26,9 +22,10 @@ import retrofit.RetrofitError;
 import retrofit.client.Response;
 
 
-public class ActiveJobStatuses extends ActionBarActivity {
+public class ActiveJobStatuses extends Activity {
     private ProgressBar spinner;
     private Token token = new Token();
+    SharedPreferenceService sps = new SharedPreferenceService();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +38,7 @@ public class ActiveJobStatuses extends ActionBarActivity {
 
         if (extras != null) {
             token.setToken(extras.getString("token"));
+            sps.setSharedPreferenceAsString(this, "token", extras.getString("token"));
         } else {
             Intent intent = new Intent(this, Login.class);
             startActivity(intent);
@@ -65,7 +63,6 @@ public class ActiveJobStatuses extends ActionBarActivity {
         jobsService.getJobs(token.getToken(), 1, new Callback<JsonObject>() {
             @Override
             public void success(JsonObject data, Response response) {
-                System.out.println(data);
                 JsonArray results = data.getAsJsonArray("results");
                 Iterator resultsIterator = results.iterator();
 

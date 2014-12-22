@@ -6,6 +6,7 @@
     android:paddingTop="20dp"
     android:paddingBottom="20dp"
     android:layout_marginBottom="10dp"
+    android:background="@color/input_bg"
     android:id="@+id/rlContainer">
 
     <TextView android:layout_width="fill_parent"
@@ -13,14 +14,16 @@
         android:text="JOB NAME"
         android:textStyle="bold"
         android:paddingLeft="20dp"
+        android:textColor="@color/subtle_text"
         android:id="@+id/textJobNameLabel"/>
 
     <TextView android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/textJobNameLabel"
         android:text="duck"
-        android:textSize="30dp"
+        android:textSize="24dp"
         android:paddingLeft="20dp"
+        android:textColor="@color/btn_blue"
         android:id="@+id/textJobName"/>
 
     <TextView android:layout_width="fill_parent"
@@ -30,14 +33,16 @@
         android:textStyle="bold"
         android:paddingLeft="20dp"
         android:paddingTop="20dp"
+        android:textColor="@color/subtle_text"
         android:id="@+id/textJobStatusLabel"/>
 
     <TextView android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/textJobStatusLabel"
         android:text="duck"
-        android:textSize="30dp"
+        android:textSize="24dp"
         android:paddingLeft="20dp"
+        android:textColor="@color/actionbar_text"
         android:id="@+id/textJobStatus"/>
 
     <TextView android:layout_width="fill_parent"
@@ -47,13 +52,29 @@
         android:textStyle="bold"
         android:paddingLeft="20dp"
         android:paddingTop="20dp"
+        android:textColor="@color/subtle_text"
         android:id="@+id/textClusterStatusLabel"/>
 
     <TextView android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/textClusterStatusLabel"
         android:text="duck"
-        android:textSize="30dp"
+        android:textSize="24dp"
         android:paddingLeft="20dp"
+        android:textColor="@color/actionbar_text"
         android:id="@+id/textClusterStatus"/>
+
+    <Button android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textJobStatus"
+        android:text="Terminate"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        style="@style/SecondaryButton"
+        android:id="@+id/terminate_button"
+        android:visibility="gone">
+
+    </Button>
 </RelativeLayout>

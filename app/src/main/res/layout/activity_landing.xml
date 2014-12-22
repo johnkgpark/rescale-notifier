@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:background="@color/body_bg">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/walle"
+            android:scaleType="fitXY">
+        </ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="50dp"
+            android:gravity="center"
+            android:text="Rescale"
+            android:textSize="40dp"
+            android:textColor="@color/actionbar_text"
+            android:id="@+id/app_title"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="where rocket science is being done"
+            android:textColor="@color/light_grey"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:paddingBottom="100dp"
+            android:layout_alignParentBottom="true"/>
+
+
+        <Button android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Log In"
+            android:id="@+id/btnRefresh"
+            android:onClick="openLogin"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+</LinearLayout>
